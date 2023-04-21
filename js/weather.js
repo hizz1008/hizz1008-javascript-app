@@ -7,10 +7,18 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       const weather = document.querySelector(".weather");
-      const name = data.name;
-      weather.innerHTML = data.weather[0].main;
+      const name = document.querySelector(".name");
+      const WEATHER = data.weather[0].main;
+      let dataWeather = "";
+
+      if (WEATHER == "Clear") {
+        dataWeather = "맑음";
+      } else if (WEATHER == Cloud) {
+        dataWeather = "흐림";
+      }
+      name.innerHTML = `${data.name} @`;
+      weather.innerHTML = dataWeather;
     });
-  console.log(position);
 }
 
 function onGeoError() {
