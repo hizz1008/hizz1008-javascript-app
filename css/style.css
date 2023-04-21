@@ -1,0 +1,16 @@
+.hidden {
+  display: none;
+}
+#bgImags > img {
+  width: 100vw;
+  height: 100vh;
+
+  display: inline-flex;
+  object-fit: cover;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  z-index: -1;
+}
