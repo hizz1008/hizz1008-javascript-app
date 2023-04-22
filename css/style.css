@@ -51,7 +51,8 @@ button {
 .temperature,
 .name,
 .todo-input,
-#login-btn {
+#login-btn,
+#loginout-btn {
   color: whitesmoke;
 }
 .login-input,
@@ -76,7 +77,7 @@ button {
 
   z-index: -1;
 
-  filter: brightness(85%);
+  filter: brightness(60%);
 }
 
 body {
@@ -100,6 +101,16 @@ body {
   font-size: 80px;
 
   border-radius: 10px;
+}
+#greeting {
+  white-space: nowrap;
+}
+#logout-form {
+  display: flex;
+}
+#loginout-btn {
+  white-space: nowrap;
+  margin-left: 6%;
 }
 #todo-list {
   text-align: start;
