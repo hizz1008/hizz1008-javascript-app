@@ -6,18 +6,11 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector(".weather");
+      const temperature = document.querySelector(".temperature");
       const name = document.querySelector(".name");
-      const WEATHER = data.weather[0].main;
-      let dataWeather = "";
 
-      if (WEATHER == "Clear") {
-        dataWeather = "맑음";
-      } else if (WEATHER == Cloud) {
-        dataWeather = "흐림";
-      }
-      name.innerHTML = `${data.name} @`;
-      weather.innerHTML = dataWeather;
+      temperature.innerHTML = `${Math.floor(data.main.temp)}° @`;
+      name.innerHTML = data.name;
     });
 }
 

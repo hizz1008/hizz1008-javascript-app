@@ -5,7 +5,7 @@ function getClock() {
   const houre = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerHTML = `${houre}:${minutes}:${seconds}`;
+  clock.innerHTML = `${houre}:${minutes}`;
 }
 getClock();
 setInterval(getClock, 1000);
